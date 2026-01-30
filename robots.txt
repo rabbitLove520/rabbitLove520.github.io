@@ -61,4 +61,4 @@ Disallow: /
 User-agent: ZoominfoBot
 Disallow: /
 
-Sitemap: https://pigLoveRabbit520.github.io/sitemap.xml
+Sitemap: https://rabbitLove520.github.io/sitemap.xml
