@@ -3,4 +3,5 @@
 <h2 id="源码编译安装">源码编译安装</h2>
 <p>前往wxWidgets<a href="https://www.wxwidgets.org/downloads/" target="_blank" rel="noopener noreffer ">官网</a>，下载wxWidgets</p>
 <p></p>
+<h3 id="编译vc版本">编译VC版本</h3>
 <p>打开<code>Developer Command Prompt for VS 2022</code>工具，进入 <code>build\msw</code> 目录，编译</p>]]></description></item></channel></rss>

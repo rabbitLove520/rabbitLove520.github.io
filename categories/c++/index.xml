@@ -3,6 +3,7 @@
 <h2 id="源码编译安装">源码编译安装</h2>
 <p>前往wxWidgets<a href="https://www.wxwidgets.org/downloads/" target="_blank" rel="noopener noreffer ">官网</a>，下载wxWidgets</p>
 <p></p>
+<h3 id="编译vc版本">编译VC版本</h3>
 <p>打开<code>Developer Command Prompt for VS 2022</code>工具，进入 <code>build\msw</code> 目录，编译</p>]]></description></item><item><title>Qt之布局管理</title><link>https://rabbitLove520.github.io/qt%E4%B9%8B%E5%B8%83%E5%B1%80%E7%AE%A1%E7%90%86/</link><pubDate>Wed, 12 Feb 2020 21:00:00 +0000</pubDate><author>Salamander</author><guid>https://rabbitLove520.github.io/qt%E4%B9%8B%E5%B8%83%E5%B1%80%E7%AE%A1%E7%90%86/</guid><description><![CDATA[<p>本文环境：</p>
 <ul>
 <li>OS：Ubuntu 18.04.3 LTS</li>
