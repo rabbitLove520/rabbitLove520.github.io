@@ -1,4 +1,7 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 猪爱兔的网站</title><link>https://rabbitLove520.github.io/posts/</link><description>所有文章 | 猪爱兔的网站</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 18 Jan 2026 21:00:00 +0000</lastBuildDate><atom:link href="https://rabbitLove520.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>Verilog学习</title><link>https://rabbitLove520.github.io/verilog_learning/</link><pubDate>Sun, 18 Jan 2026 21:00:00 +0000</pubDate><author>pigLoveRabbit</author><guid>https://rabbitLove520.github.io/verilog_learning/</guid><description><![CDATA[<p></p>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 猪爱兔的网站</title><link>https://rabbitLove520.github.io/posts/</link><description>所有文章 | 猪爱兔的网站</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 15 Mar 2026 14:00:00 +0000</lastBuildDate><atom:link href="https://rabbitLove520.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>卷积学习</title><link>https://rabbitLove520.github.io/conv/</link><pubDate>Sun, 15 Mar 2026 14:00:00 +0000</pubDate><author>pigLoveRabbit</author><guid>https://rabbitLove520.github.io/conv/</guid><description><![CDATA[<p></p>
+<h2 id="卷积">卷积</h2>
+<p><a href="https://triton.hyper.ai/" target="_blank" rel="noopener noreffer ">官网介绍</a>：Triton 是一种用于并行编程的语言和编译器。它旨在提供一个基于 Python 的编程环境，以高效编写自定义 DNN 计算内核，并能够在现代 GPU 硬件上以最大吞吐量运行。<br>
+简单讲，就是可以用Python写GPU算子。</p>]]></description></item><item><title>Verilog学习</title><link>https://rabbitLove520.github.io/verilog_learning/</link><pubDate>Sun, 18 Jan 2026 21:00:00 +0000</pubDate><author>pigLoveRabbit</author><guid>https://rabbitLove520.github.io/verilog_learning/</guid><description><![CDATA[<p></p>
 <!-- more -->
 <h2 id="基本语法">基本语法</h2>
 <p>Verilog HDL（简称 Verilog ）是一种硬件描述语言，用于数字电路的系统设计。可对算法级、门级、开关级等多种抽象设计层次进行建模。<br>
@@ -170,4 +173,4 @@ $$
 $$
 \text{L} = \frac{1}{2n} \sum_{i=1}^{n} \left( y_i - f(x_i) \right)^2
 $$
-其实就是多了个1/2n。</p>]]></description></item><item><title>JavaScript中的微任务、宏任务和Promise</title><link>https://rabbitLove520.github.io/javascript_%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97_promise/</link><pubDate>Wed, 18 Sep 2024 09:00:00 +0000</pubDate><author>pigLoveRabbit</author><guid>https://rabbitLove520.github.io/javascript_%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97_promise/</guid><description>&lt;p>JavaScript会将异步任务划分为微任务和宏任务，微任务会在宏任务之前执行（因为每次从主线程切换到任务队列时，都会优先遍历微任务队列，后遍历宏任务队列）。&lt;/p></description></item></channel></rss>
+其实就是多了个1/2n。</p>]]></description></item></channel></rss>
