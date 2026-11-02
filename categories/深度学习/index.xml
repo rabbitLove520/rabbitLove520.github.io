@@ -1,4 +1,55 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>深度学习 - 分类 - 猪爱兔的网站</title><link>https://rabbitLove520.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</link><description>深度学习 - 分类 - 猪爱兔的网站</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 15 Mar 2026 14:00:00 +0000</lastBuildDate><atom:link href="https://rabbitLove520.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml"/><item><title>卷积学习</title><link>https://rabbitLove520.github.io/conv/</link><pubDate>Sun, 15 Mar 2026 14:00:00 +0000</pubDate><author>pigLoveRabbit</author><guid>https://rabbitLove520.github.io/conv/</guid><description><![CDATA[<p></p>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>深度学习 - 分类 - 猪爱兔的网站</title><link>https://rabbitLove520.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</link><description>深度学习 - 分类 - 猪爱兔的网站</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 01 Nov 2026 14:00:00 +0000</lastBuildDate><atom:link href="https://rabbitLove520.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml"/><item><title>LLM知识</title><link>https://rabbitLove520.github.io/llm_knowledge/</link><pubDate>Sun, 01 Nov 2026 14:00:00 +0000</pubDate><author>pigLoveRabbit</author><guid>https://rabbitLove520.github.io/llm_knowledge/</guid><description><![CDATA[<p></p>
+<h2 id="模型权重分类">模型权重分类</h2>
+<h3 id="各模块量级汇总llama-31-8b-粗算">各模块量级汇总（Llama 3.1 8B 粗算）</h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">模块</th>
+          <th style="text-align: left">参数名</th>
+          <th style="text-align: left">单层/单模块量级</th>
+          <th style="text-align: left">总层数</th>
+          <th style="text-align: left">总量级</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">词嵌入</td>
+          <td style="text-align: left"><code>embed_tokens.weight</code></td>
+          <td style="text-align: left">约 5.25 亿</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">约 5.25 亿</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">注意力 Q/K/V/O</td>
+          <td style="text-align: left"><code>q_proj</code> / <code>k_proj</code> / <code>v_proj</code> / <code>o_proj</code></td>
+          <td style="text-align: left">约 42M（GQA 下 K/V 小）</td>
+          <td style="text-align: left">32</td>
+          <td style="text-align: left">约 13.4 亿</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">MLP SwiGLU</td>
+          <td style="text-align: left"><code>gate_proj</code> / <code>up_proj</code> / <code>down_proj</code></td>
+          <td style="text-align: left">约 176M</td>
+          <td style="text-align: left">32</td>
+          <td style="text-align: left">约 56.3 亿</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">归一化</td>
+          <td style="text-align: left"><code>input_layernorm</code> / <code>post_attention_layernorm</code> / <code>model.norm</code></td>
+          <td style="text-align: left">极小</td>
+          <td style="text-align: left">—</td>
+          <td style="text-align: left">可忽略</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">输出层</td>
+          <td style="text-align: left"><code>lm_head.weight</code></td>
+          <td style="text-align: left">约 5.25 亿</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">约 5.25 亿</td>
+      </tr>
+  </tbody>
+</table>
+<p>可以看到，<strong>MLP 是稠密模型参数的最大头</strong>，其次是注意力，嵌入和 <code>lm_head</code> 各占约 5 亿量级。当层数增加时，<code>L × (注意力 + MLP)</code> 会迅速超过 <code>2Vd</code> 的嵌入/输出项。</p>]]></description></item><item><title>卷积学习</title><link>https://rabbitLove520.github.io/conv/</link><pubDate>Sun, 15 Mar 2026 14:00:00 +0000</pubDate><author>pigLoveRabbit</author><guid>https://rabbitLove520.github.io/conv/</guid><description><![CDATA[<p></p>
 <h2 id="卷积">卷积</h2>
 <p><a href="https://triton.hyper.ai/" target="_blank" rel="noopener noreffer ">官网介绍</a>：Triton 是一种用于并行编程的语言和编译器。它旨在提供一个基于 Python 的编程环境，以高效编写自定义 DNN 计算内核，并能够在现代 GPU 硬件上以最大吞吐量运行。<br>
 简单讲，就是可以用Python写GPU算子。</p>]]></description></item><item><title>Triton写Attention算子</title><link>https://rabbitLove520.github.io/triton_attention/</link><pubDate>Sun, 26 Oct 2025 14:00:00 +0000</pubDate><author>pigLoveRabbit</author><guid>https://rabbitLove520.github.io/triton_attention/</guid><description><![CDATA[<p></p>
