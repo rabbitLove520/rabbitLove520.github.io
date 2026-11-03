@@ -25,8 +25,8 @@
 ---
 
 ✅ **B** = Batch size  
-✅ **S** = Sequence length（序列长度）  
 ✅ **N** = Number of attention heads（注意力头数）  
+✅ **S** = Sequence length（序列长度）  
 ✅ **D** = Dimension per head（每个头的维度）
 
 ---
@@ -35,12 +35,11 @@
 
 1. **B (Batch Size)**  
    表示一次前向传播中处理的样本数量。比如一次处理32个句子，B=32。
-
-2. **S (Sequence Length)**  
-   表示每个样本中的 token 数量。比如一个句子有50个词，S=50。
-
-3. **N (Number of Heads)**  
+2. **N (Number of Heads)**  
    在多头注意力（Multi-Head Attention）中，query/key/value 会被拆分成 N 个“头”，每个头独立计算注意力。比如 N=8。
+
+3. **S (Sequence Length)**  
+   表示每个样本中的 token 数量。比如一个句子有50个词，S=50。
 
 4. **D (Dimension per Head)**  
    每个注意力头的向量维度。原始的 embedding 维度（如512）会被平均分配到每个头上。例如：总维度512，8个头 → D = 512 / 8 = 64。
